@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: kick-scooter-gateway
+
+  cloud:
+    gateway:
+      default-filters:
+        - StripPrefix=1
+      routes:
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/payment-service/**
+        - id: vehicle-service
+          uri: lb://vehicle-service
+          predicates:
+            - Path=/vehicle-service/**
+        - id: trip-service
+          uri: lb://trip-service
+          predicates:
+            - Path=/trip-service/**
+        - id: messaging-service
+          uri: lb://messaging-service
+          predicates:
+            - Path=/messaging-service/**
+        - id: identity-service
+          uri: lb://identity-service
+          predicates:
+            - Path=/identity-service/**
+        - id: simulation-service
+          uri: lb://simulation-service
+          predicates:
+            - Path=/simulation-service/**
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders: "*"
+            exposedHeaders:
+              - Authorization
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_SERVER}/eureka/
+
+logging:
+  file:
+    path: /var/log/gateway
