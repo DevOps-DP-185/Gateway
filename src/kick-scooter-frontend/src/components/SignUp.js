@@ -95,10 +95,10 @@ export default function SignUp(props) {
                 "password": state.password
             }
 
-            axios.post(`/identity-service/scooter/accounts/sign-up`, payload).then((res) => {
+            axios.post(`/identity-service/accounts/sign-up`, payload).then((res) => {
                 if (res.status === 200) {
                     console.log(res.data);
-                    props.history.push('/scooter/greeting');
+                    props.history.push('/greeting');
                 }
             }).catch((error) => {
                 console.log(error.response.data.error);
@@ -189,7 +189,7 @@ export default function SignUp(props) {
                     </Button>
                     <Grid container justify="flex-end">
                         <Grid item>
-                            <Link href="/scooter/sign-in" variant="body2">
+                            <Link href="/sign-in" variant="body2">
                                 Already have an account? Sign in
                             </Link>
                         </Grid>

@@ -27,7 +27,7 @@ export default function AccountActivation(props) {
     const activateAccount = () => {
         const token = props.match.params.token;
 
-        axios.get(`/identity-service/scooter/accounts/activate/` + token)
+        axios.get(`/identity-service/accounts/activate/` + token)
             .then((res) => {
                 if (res.status === 204) {
                     setActivated(true);

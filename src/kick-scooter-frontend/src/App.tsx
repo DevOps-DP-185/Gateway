@@ -22,10 +22,10 @@ function App() {
                     <MapComponent/>
                     <TripButton/>
                 </AuthenticatedRoute>
-                <Route exact path="/scooter/sign-in" component={SignIn}/>
-                <Route exact path="/scooter/sign-up" component={SignUp}/>
-                <Route exact path="/scooter/greeting" component={Greeting}/>
-                <Route exact path="/scooter/activation/:token" component={AccountActivation}/>
+                <Route exact path="/sign-in" component={SignIn}/>
+                <Route exact path="/sign-up" component={SignUp}/>
+                <Route exact path="/greeting" component={Greeting}/>
+                <Route exact path="/activation/:token" component={AccountActivation}/>
                 <Route component={WrongPath}/>
             </Switch>
         </Router>

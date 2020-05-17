@@ -54,7 +54,7 @@ export default function Account(props) {
     const getUserInfo = () => {
         const token = tokenDecoder();
 
-        axios.get(`/identity-service/scooter/accounts/` + token)
+        axios.get(`/identity-service/accounts/` + token)
             .then((res) => {
                 if (res.status === 200) {
                     setUser({

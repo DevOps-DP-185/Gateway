@@ -113,7 +113,7 @@ export default function ToolBar(props) {
         e.preventDefault();
         localStorage.removeItem('jwtToken');
         setAuthorizationToken(false);
-        history.push('/scooter/sign-in');
+        history.push('/sign-in');
     }
 
     return (

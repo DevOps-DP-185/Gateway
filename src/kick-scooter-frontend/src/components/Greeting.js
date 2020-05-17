@@ -30,7 +30,7 @@ export default function Greeting(props) {
 
     useEffect(() => {
         setTimeout(()=>{
-            props.history.push('/scooter/sign-in')
+            props.history.push('/sign-in')
         },5000)
     })
 

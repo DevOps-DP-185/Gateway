@@ -9,7 +9,7 @@ const AuthenticatedRoute = ({children, ...rest}) => (
                 children
             ) : (
                 <Redirect to={{
-                    pathname: "/scooter/sign-in",
+                    pathname: "/sign-in",
                     state: {from: rest.location}
                 }}
                 />
