@@ -9,3 +9,5 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezon
 RUN wget "https://collectors.sumologic.com/rest/download/linux/64" -O SumoCollector.sh && chmod +x SumoCollector.sh
 ENTRYPOINT ["./run.sh"]
 #ENTRYPOINT ["java", "-jar", "kick-scooter-gateway.jar"]
+
+
