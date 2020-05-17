@@ -24,7 +24,7 @@ spring:
           predicates:
             - Path=/messaging-service/**
         - id: identity-service
-          uri: lb://identity-service/kick-scooter-identity/kick-scooter-identity
+          uri: lb://identity-service/kick-scooter-identity
           predicates:
             - Path=/identity-service/**
         - id: simulation-service

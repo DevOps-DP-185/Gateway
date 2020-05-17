@@ -95,7 +95,7 @@ export default function SignUp(props) {
                 "password": state.password
             }
 
-            axios.post(`/identity-service/kick-scooter-identity/kick-scooter-identity/accounts/sign-up`, payload).then((res) => {
+            axios.post(`/identity-service/kick-scooter-identity/accounts/sign-up`, payload).then((res) => {
                 if (res.status === 200) {
                     console.log(res.data);
                     props.history.push('/greeting');
