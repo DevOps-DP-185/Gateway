@@ -98,7 +98,7 @@ export default function SignUp(props) {
             axios.post(`/identity-service/scooter/accounts/sign-up`, payload).then((res) => {
                 if (res.status === 200) {
                     console.log(res.data);
-                    props.history.push('/greeting');
+                    props.history.push('/scooter/greeting');
                 }
             }).catch((error) => {
                 console.log(error.response.data.error);

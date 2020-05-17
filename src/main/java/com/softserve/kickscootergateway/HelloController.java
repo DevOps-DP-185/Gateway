@@ -14,7 +14,7 @@ public class HelloController {
     @Value("classpath:/static/index.html")
     private Resource index;
 
-    @GetMapping(produces = MediaType.TEXT_HTML_VALUE, value = {"/", "/scooter/sign-in/**", "/scooter/sign-up/**", "/greeting/**",
+    @GetMapping(produces = MediaType.TEXT_HTML_VALUE, value = {"/", "/scooter/sign-in/**", "/scooter/sign-up/**", "/scooter/greeting/**",
             "/scooter/activation/**"})
     public Resource getIndex() {
         return index;
