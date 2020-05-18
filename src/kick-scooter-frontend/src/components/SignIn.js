@@ -68,7 +68,7 @@ export default function SignIn(props) {
                 "password": state.password
             }
 
-            axios.post(`/identity-service/accounts/sign-in`, payload).then((res) => {
+            axios.post(`/identity-service/kick-scooter-identity/accounts/sign-in`, payload).then((res) => {
                 if (res.status === 200) {
                     const token = res.headers.authorization;
                     if (token !== undefined) {
