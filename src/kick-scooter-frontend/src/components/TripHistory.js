@@ -40,7 +40,7 @@ export default function TripHistory(props) {
     useEffect(() => {
         const id = getIdFromToken();
 
-        axios.get( "/trip-service/trips/" + id + '/history')
+        axios.get( "/trip-service/kick-scooter-trip/trips/" + id + '/history')
             .then(response => {
                 setTrips(response.data);
             })

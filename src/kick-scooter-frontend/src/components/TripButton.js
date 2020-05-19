@@ -55,7 +55,7 @@ export default function TripButton() {
             "scooterId": scooterId
         }
 
-        axios.post("/trip-service/trips/start", payload)
+        axios.post("/trip-service/kick-scooter-trip/trips/start", payload)
             .then((res) => {
                 if (res.status === 200) {
                     console.log('trip has started');
@@ -74,7 +74,7 @@ export default function TripButton() {
             "scooterId": scooterId
         }
 
-        axios.post("/trip-service/trips/finish", payload)
+        axios.post("/trip-service/kick-scooter-trip/trips/finish", payload)
             .then((res) => {
                 if (res.status === 200) {
                     console.log('trip has ended');
