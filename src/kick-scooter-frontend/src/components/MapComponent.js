@@ -26,7 +26,7 @@ export default function MapComponent() {
     useEffect(() => {
 
         const interval = setInterval(() => {
-            axios.get('/vehicle-service/scooters/status/free')
+            axios.get('/vehicle-service/kick-scooter-vehicle/scooters/status/free')
                 .then(response => {
                     setScooters(response.data)
                 })
