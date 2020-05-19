@@ -19,7 +19,7 @@ spring:
           uri: lb://trip-service
           predicates:
             - Path=/trip-service/**
-          uri: lb://messaging-service
+        - uri: lb://messaging-service
           predicates:
             - Path=/messaging-service/**
         - id: identity-service
