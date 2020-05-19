@@ -70,7 +70,7 @@ function CardMenu({cardInfo, handleDeleteCard}) {
         };
 
         console.log(payload);
-        axios.put(`/payment-service/cards/default`, payload).then((res) => {
+        axios.put(`/payment-service/kick-scooter-payment/cards/default`, payload).then((res) => {
             console.log(payload);
             if (res.status === 200) {
                 setAnchorEl(null);
@@ -137,7 +137,7 @@ function Cards() {
                 "last4": cardInfo.last4
             };
 
-            axios.delete(`/payment-service/cards`, {data: payload}).then((res) => {
+            axios.delete(`/payment-service/kick-scooter-payment/cards`, {data: payload}).then((res) => {
                 console.log(payload);
                 if (res.status === 200) {
                     getCards();
@@ -150,7 +150,7 @@ function Cards() {
 
     const getCards = () => {
 
-        axios.get( `/payment-service/cards/` + token)
+        axios.get( `/payment-service/kick-scooter-payment/cards/` + token)
             .then((res) => {
                 if (res.status === 200) {
                     setCards(res.data);
@@ -286,7 +286,7 @@ function NewCardTemplate() {
             "yearMonth": card.yearMonth,
         };
         console.log(payload);
-        axios.post( `/payment-service/cards`, payload).then((res) => {
+        axios.post( `/payment-service/kick-scooter-payment/cards`, payload).then((res) => {
             console.log(payload);
             if (res.status === 200) {
                 console.log(res.data);

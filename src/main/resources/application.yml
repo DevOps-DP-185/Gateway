@@ -8,9 +8,9 @@ spring:
         - StripPrefix=1
       routes:
         - id: payment-service
-          uri: lb://payment-service
+          uri: lb://payment-service/kick-scooter-payment
           predicates:
-            - Path=/payment-service/**
+            - Path=/payment-service/kick-scooter-payment/**
         - id: vehicle-service
           uri: lb://vehicle-service
           predicates:
@@ -19,7 +19,6 @@ spring:
           uri: lb://trip-service
           predicates:
             - Path=/trip-service/**
-        - id: messaging-service
           uri: lb://messaging-service
           predicates:
             - Path=/messaging-service/**
